@@ -1,0 +1,7 @@
+{% load staticfiles twitter_bootstrap %}
+<script src="{% static "newsletter.js" %}"></script>
+<form action="{% url 'newsletters_subscribe' %}">
+    {% if on_success %}<input type="hidden" name="on_success" value="{{ on_success }}" >{% endif %}
+    {{ form|twitter_bootstrap }}
+</form>
+<div class="newsletter_message"></div>
