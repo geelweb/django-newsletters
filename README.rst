@@ -36,3 +36,10 @@ Render a one field form to add an email to the newsletter.:
 
     {% newsletter_form %}
 
+**Tag options:**
+
+* label
+
+    {% newsletter_form label="Subscribe to our newsletter" %}
+
+
