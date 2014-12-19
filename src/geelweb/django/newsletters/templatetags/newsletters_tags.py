@@ -10,6 +10,8 @@ def newsletter_form(*args, **kwargs):
     form = NewsletterForm()
     if 'label' in kwargs:
         form.fields['email'].label = kwargs['label']
+    if 'placeholder' in kwargs:
+        form.fields['email'].widget.attrs['placeholder'] = kwargs['placeholder']
 
     return {
         'form': form,

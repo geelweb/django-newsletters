@@ -42,4 +42,7 @@ Render a one field form to add an email to the newsletter.:
 
     {% newsletter_form label="Subscribe to our newsletter" %}
 
+* placeholder
+
+    {% newsletter_form placeholder="Enter your email address" %}
 
