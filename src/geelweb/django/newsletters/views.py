@@ -2,7 +2,10 @@ from django.shortcuts import render, render_to_response
 from django.template import RequestContext
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, HttpResponseRedirect
+from django.utils.translation import ugettext as _
+
 from geelweb.django.newsletters.forms import NewsletterForm
+
 import json
 
 def subscribe(request):
@@ -13,7 +16,7 @@ def subscribe(request):
         if request.is_ajax():
             return HttpResponse(json.dumps({
                     'code': 200,
-                    'message': 'Thanks, we registered your subscription',
+                    'message': _('Thanks, we registered your subscription'),
                 }),  content_type='application/json')
 
         redirect_to = request.POST.get(

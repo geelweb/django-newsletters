@@ -1,10 +1,12 @@
 from django import forms
+from django.utils.translation import ugettext as _
+
 from geelweb.django.twitter_bootstrap_form.widgets import TextInputWithButton
 from geelweb.django.newsletters.models import Newsletter
 
 DEFAULT_ERRORS = {
-    'required': u'You have to provide an email to register to our newsletter',
-    'invalid': u'Please, provide a valid email address',
+    'required': _('You have to provide an email to register to our newsletter'),
+    'invalid': _('Please, provide a valid email address'),
 }
 
 class NewsletterForm(forms.ModelForm):
@@ -12,14 +14,14 @@ class NewsletterForm(forms.ModelForm):
         model = Newsletter
         fields = ['email']
         labels = {
-            'email': u'Subscribe to our newsletter',
+            'email': _('Subscribe to our newsletter'),
         }
         error_messages = {
             'email': DEFAULT_ERRORS,
         }
         widgets = {
             'email': TextInputWithButton(attrs={
-                'placeholder': u'Enter your email address',
+                'placeholder': _('Enter your email address'),
                 'required':'required',
                 'id': 'newsletter_email',
             }, btn_attrs={

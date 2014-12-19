@@ -36,13 +36,13 @@ Render a one field form to add an email to the newsletter.:
 
     {% newsletter_form %}
 
+    {% newsletter_form label="Subscribe to our newsletter" placeholder="Enter your email address" %}
+
 **Tag options:**
 
-* label
+* label: The field label
+* placeholder: The field placeholder
+* on_success: The url to redirect after the form was submited
 
-    {% newsletter_form label="Subscribe to our newsletter" %}
 
-* placeholder
-
-    {% newsletter_form placeholder="Enter your email address" %}
 

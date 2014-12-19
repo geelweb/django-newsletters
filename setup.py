@@ -34,7 +34,9 @@ if __name__ == "__main__":
         package_data = {
             'geelweb.django.newsletters': [
                 'templates/newsletters/*.html',
-                'static/*.js'
+                'static/*.js',
+                'locale/*/*/*.po',
+                'locale/*/*/*.mo'
                 ],
         },
         keywords = ['django', 'form', 'newsletter'],
