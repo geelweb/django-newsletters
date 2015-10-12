@@ -10,5 +10,6 @@ env:
   - DJANGO_VERSION=1.8
 install:
   - pip install -q Django==$DJANGO_VERSION --use-mirrors
+  - pip install django-twitterbootstrap-form>=0.3.2
 script: python tests/runtests.py
 
