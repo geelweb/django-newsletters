@@ -1,5 +1,8 @@
 
 INSTALLED_APPS = (
+    'django.contrib.staticfiles',
+    'widget_tweaks',
+    'geelweb.django.twitter_bootstrap_form',
     'geelweb.django.newsletters',
 )
 
@@ -14,6 +17,12 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+    'django.template.loaders.eggs.Loader',
+)
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -21,3 +30,6 @@ DATABASES = {
     }
 }
 
+STATIC_URL = '/static/'
+
+ROOT_URLCONF = 'tests.urls'
