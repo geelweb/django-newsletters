@@ -17,7 +17,7 @@ README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 
 if __name__ == "__main__":
     setup(
-        name="django newsletters",
+        name="geelweb.django.newsletters",
         version=__version__,
         description="A simple add to manage newsletters subscription",
         long_description=README,
@@ -40,6 +40,12 @@ if __name__ == "__main__":
                 ],
         },
         keywords = ['django', 'form', 'newsletter'],
+        install_requires = [
+            'Django>=1.6',
+            'django-twitterbootstrap-form>=0.3.2'
+            ],
+        test_suite = 'tests.runtests',
+        #zip_safe=True,
         )
 
 
