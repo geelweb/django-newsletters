@@ -10,5 +10,5 @@ env:
   - DJANGO_VERSION=1.8
 install:
   - pip install -q Django==$DJANGO_VERSION --use-mirrors
-script: python setup.py test
+script: python setup.py -q test
 
