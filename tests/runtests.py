@@ -1,13 +1,6 @@
 import os
 import sys
 
-DIRNAME = os.path.join(os.path.dirname(__file__), '..')
-
-sys.path.append(DIRNAME)
-sys.path.append(os.path.join(DIRNAME, 'src'))
-
-#sys.path = [DIRNAME, os.path.join(DIRNAME, 'src')] + sys.path
-
 os.environ['DJANGO_SETTINGS_MODULE'] = 'tests.test_settings'
 
 import django
