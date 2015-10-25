@@ -5,7 +5,7 @@
 # vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4:
 
 __author__ = "Guillaume Luchet <guillaume@geelweb.org>"
-__version__ = "0.1"
+__version__ = "1.0"
 
 import os, sys
 from setuptools import setup, find_packages
@@ -19,7 +19,7 @@ if __name__ == "__main__":
     setup(
         name="geelweb.django.newsletters",
         version=__version__,
-        description="A simple add to manage newsletters subscription",
+        description="A simple app to manage newsletters subscription",
         long_description=README,
         author=maintainer,
         author_email=maintainer_email,
@@ -41,7 +41,7 @@ if __name__ == "__main__":
         },
         keywords = ['django', 'form', 'newsletter'],
         install_requires = [
-            'Django>=1.6',
+            'Django>=1.8',
             'django-twitterbootstrap-form>=0.3.2'
             ],
         test_suite = 'tests.runtests',
