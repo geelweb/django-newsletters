@@ -7,10 +7,13 @@ A basic app to manage newsletter subscriptions.
 Install
 =======
 
-from source::
+Development version using pip::
 
-    git clone https://github.com/geelweb/django-editos.git
-    pip install ./django-editos/
+    pip install https://github.com/geelweb/django-newsletters/archive/master.zip
+
+Latest stable version using pip::
+
+    pip install https://github.com/geelweb/django-newsletters/archive/1.0.zip
 
 Configuring
 ===========
