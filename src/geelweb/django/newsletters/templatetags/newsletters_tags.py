@@ -12,6 +12,8 @@ def newsletter_form(*args, **kwargs):
         form.fields['email'].label = kwargs['label']
     if 'placeholder' in kwargs:
         form.fields['email'].widget.attrs['placeholder'] = kwargs['placeholder']
+    if 'css_selector' in kwargs:
+        form.fields['email'].widget.btn_attrs['onclick'] = "newsletter.add('%s');" % kwargs['css_selector']
 
     return {
         'form': form,
