@@ -1,6 +1,6 @@
 from django.shortcuts import render, render_to_response
 from django.template import RequestContext
-from django.core.urlresolvers import reverse
+from django.url import reverse
 from django.http import HttpResponse, HttpResponseRedirect
 from django.utils.translation import ugettext as _
 
